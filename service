@@ -1,0 +1,12 @@
+[Unit]
+Description=Chromium Kiosk Mode
+After=graphical.target
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/chromium-browser --kiosk http://0.0.0.0:8080
+User=consulta1
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
